@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lampada</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        main {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        #imgInterruptor {
+            width: 10%;
+            margin-top: 100px;
+            cursor: pointer;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+           <img id="imgLampada" src="/imagens/lampadaApagada.jpg" alt="Luz Apagada">
+        </div>
+       
+        <img id="imgInterruptor"  src="/imagens/interruptor.jpg" alt="interruptor">
+        
+    </main>
+
+    <script>
+
+        let lampada = document.getElementById("imgLampada"); 
+        let lampadaEstaLigada = false;
+        
+        imgInterruptor.addEventListener("click", ligarLampada);
+
+        function ligarLampada () {
+            if (lampadaEstaLigada == false) {
+                lampada.setAttribute('src','imagens/lampadaAcesa.jpg');
+                lampadaEstaLigada = true;
+            } else {
+                lampada.setAttribute('src','imagens/lampadaApagada.jpg');
+                lampadaEstaLigada = false;
+            }
+        }
+
+    </script>
+
+</body>
+</html>
